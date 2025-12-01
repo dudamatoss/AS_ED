@@ -1,8 +1,6 @@
 package jogo;
 
-/**
- * Classe que armazena as configurações da partida
- */
+// Classe que armazena as configurações da partida
 public class ConfiguracaoPartida {
     private double saldoInicial;
     private double salario;

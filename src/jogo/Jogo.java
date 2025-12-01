@@ -7,9 +7,7 @@ import gerenciadores.GerenciadorJogadores;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Classe principal que gerencia a lógica do jogo
- */
+// Classe principal que gerencia a lógica do jogo
 public class Jogo {
     private Tabuleiro tabuleiro;
     private Baralho baralho;
@@ -29,9 +27,7 @@ public class Jogo {
         this.rodadaAtual = 0;
     }
     
-    /**
-     * Inicia uma nova partida
-     */
+    // Inicia uma nova partida
     public void iniciarPartida() {
         if (!validarInicio()) {
             System.out.println("Não é possível iniciar o jogo. Verifique os requisitos mínimos.");
@@ -55,9 +51,7 @@ public class Jogo {
         executarPartida();
     }
     
-    /**
-     * Valida se o jogo pode ser iniciado
-     */
+    // Valida se o jogo pode ser iniciado
     private boolean validarInicio() {
         if (!gerenciadorImoveis.validarMinimo()) {
             System.out.println("É necessário cadastrar pelo menos 10 imóveis!");
@@ -70,9 +64,7 @@ public class Jogo {
         return true;
     }
     
-    /**
-     * Executa o loop principal da partida
-     */
+    // Executa o loop principal da partida
     private void executarPartida() {
         List<Jogador> jogadores = gerenciadorJogadores.getJogadores();
         
@@ -116,9 +108,7 @@ public class Jogo {
         encerrarPartida();
     }
     
-    /**
-     * Processa a jogada de um jogador
-     */
+    // Processa jogada: lança dados, move jogador e verifica interações
     private void processarJogada(Jogador jogador) {
         NoCasa posicaoAnterior = jogador.getPosicaoAtual();
         
@@ -143,9 +133,7 @@ public class Jogo {
         processarCasa(jogador, novaPosicao);
     }
     
-    /**
-     * Processa a interação com a casa onde o jogador parou
-     */
+    // Processa interação com a casa (compra, aluguel, imposto, etc.)
     private void processarCasa(Jogador jogador, NoCasa casaAtual) {
         Casa casa = casaAtual.getCasa();
         TipoCasa tipo = casa.getTipo();
@@ -178,9 +166,7 @@ public class Jogo {
         }
     }
     
-    /**
-     * Processa interação com imóvel
-     */
+    // Processa compra de imóvel ou pagamento de aluguel
     private void processarImovel(Jogador jogador, Casa casa) {
         Imovel imovel = casa.getImovel();
         
@@ -224,9 +210,7 @@ public class Jogo {
         }
     }
     
-    /**
-     * Processa casa de imposto
-     */
+    // Calcula e cobra imposto (5% do patrimônio)
     private void processarImposto(Jogador jogador) {
         double patrimonio = jogador.calcularPatrimonio();
         double imposto = patrimonio * 0.05; // 5% do patrimônio
@@ -244,9 +228,7 @@ public class Jogo {
         }
     }
     
-    /**
-     * Processa casa de restituição
-     */
+    // Paga restituição (10% do salário)
     private void processarRestituicao(Jogador jogador) {
         double restituicao = configuracao.getSalario() * 0.10; // 10% do salário
         jogador.adicionarSaldo(restituicao);
@@ -254,9 +236,7 @@ public class Jogo {
                          " de restituição!");
     }
     
-    /**
-     * Processa casa de Sorte/Revés
-     */
+    // Puxa carta do baralho e aplica efeito
     private void processarSorteReves(Jogador jogador) {
         System.out.println("Você parou em Sorte/Revés! Puxando uma carta...");
         Carta carta = baralho.puxarCarta();
@@ -265,9 +245,7 @@ public class Jogo {
         aplicarEfeitoCarta(jogador, carta);
     }
     
-    /**
-     * Aplica o efeito de uma carta
-     */
+    // Aplica o efeito de uma carta
     private void aplicarEfeitoCarta(Jogador jogador, Carta carta) {
         TipoAcaoCarta tipo = carta.getTipoAcao();
         double valor = carta.getValor();
@@ -355,9 +333,7 @@ public class Jogo {
         }
     }
     
-    /**
-     * Processa a lógica de prisão
-     */
+    // Processa tentativa de sair da prisão (dados duplos)
     private void processarPrisao(Jogador jogador) {
         jogador.incrementarRodadasNaPrisao();
         int tentativas = jogador.getRodadasNaPrisao();
@@ -392,9 +368,7 @@ public class Jogo {
         }
     }
     
-    /**
-     * Declara um jogador como falido
-     */
+    // Declara jogador como falido e libera propriedades
     private void falirJogador(Jogador jogador) {
         jogador.setFalido(true);
         jogador.setSaldo(0);
@@ -408,9 +382,7 @@ public class Jogo {
         System.out.println("\n*** " + jogador.getNome() + " FALIU! ***\n");
     }
     
-    /**
-     * Encerra a partida e declara o vencedor
-     */
+    // Encerra partida e declara vencedor (maior patrimônio)
     private void encerrarPartida() {
         System.out.println("\n========== PARTIDA ENCERRADA ==========");
         

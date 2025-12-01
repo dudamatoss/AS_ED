@@ -1,8 +1,6 @@
 package modelos;
 
-/**
- * Enumeração que define os tipos de ações das cartas
- */
+// Enumeração que define os tipos de ações das cartas
 public enum TipoAcaoCarta {
     GANHAR_DINHEIRO,
     PERDER_DINHEIRO,

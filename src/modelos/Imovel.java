@@ -1,8 +1,6 @@
 package modelos;
 
-/**
- * Classe que representa um imóvel no jogo
- */
+// Classe que representa um imóvel no jogo
 public class Imovel {
     private int id;
     private String nome;

@@ -2,9 +2,7 @@ package estruturas;
 
 import modelos.Casa;
 
-/**
- * Classe que representa um nó da lista ligada circular
- */
+// Classe que representa um nó da lista ligada circular
 public class NoCasa {
     private Casa casa;
     private NoCasa proximo;

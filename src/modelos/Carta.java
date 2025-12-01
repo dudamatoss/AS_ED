@@ -1,8 +1,6 @@
 package modelos;
 
-/**
- * Classe que representa uma carta de Sorte/Revés
- */
+// Classe que representa uma carta de Sorte/Revés
 public class Carta {
     private String descricao;
     private TipoAcaoCarta tipoAcao;

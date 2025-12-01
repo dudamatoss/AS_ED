@@ -2,16 +2,13 @@ package estruturas;
 
 import modelos.Carta;
 
-/**
- * Implementação de Pilha (LIFO) para gerenciar as cartas de Sorte/Revés
- */
+// Pilha LIFO (Last-In, First-Out) para gerenciar cartas de Sorte/Revés
+// Última carta empilhada é a primeira a ser retirada
 public class Pilha {
     private NoPilha topo;
     private int tamanho;
     
-    /**
-     * Classe interna que representa um nó da pilha
-     */
+    // Nó interno da pilha
     private static class NoPilha {
         private Carta carta;
         private NoPilha proximo;
@@ -39,9 +36,7 @@ public class Pilha {
         this.tamanho = 0;
     }
     
-    /**
-     * Adiciona uma carta no topo da pilha (push)
-     */
+    // Adiciona carta no topo da pilha (push)
     public void empilhar(Carta carta) {
         NoPilha novoNo = new NoPilha(carta);
         novoNo.setProximo(topo);
@@ -49,9 +44,7 @@ public class Pilha {
         tamanho++;
     }
     
-    /**
-     * Remove e retorna a carta do topo da pilha (pop)
-     */
+    // Remove e retorna carta do topo (pop)
     public Carta desempilhar() {
         if (estaVazia()) {
             return null;
@@ -63,9 +56,7 @@ public class Pilha {
         return carta;
     }
     
-    /**
-     * Retorna a carta do topo sem removê-la (peek)
-     */
+    // Retorna carta do topo sem remover (peek)
     public Carta verTopo() {
         if (estaVazia()) {
             return null;
@@ -73,23 +64,17 @@ public class Pilha {
         return topo.getCarta();
     }
     
-    /**
-     * Verifica se a pilha está vazia
-     */
+    // Verifica se a pilha está vazia
     public boolean estaVazia() {
         return topo == null;
     }
     
-    /**
-     * Retorna o tamanho da pilha
-     */
+    // Retorna o tamanho da pilha
     public int getTamanho() {
         return tamanho;
     }
     
-    /**
-     * Adiciona todas as cartas de um array na pilha
-     */
+    // Adiciona todas as cartas de um array na pilha
     public void empilharTodas(Carta[] cartas) {
         for (Carta carta : cartas) {
             empilhar(carta);

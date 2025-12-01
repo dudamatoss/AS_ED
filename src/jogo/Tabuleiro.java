@@ -9,9 +9,7 @@ import gerenciadores.GerenciadorImoveis;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Classe que gerencia o tabuleiro usando Lista Ligada Circular
- */
+// Classe que gerencia o tabuleiro usando Lista Ligada Circular
 public class Tabuleiro {
     private ListaCircular casas;
     private Random random;
@@ -21,9 +19,7 @@ public class Tabuleiro {
         this.random = new Random();
     }
     
-    /**
-     * Inicializa o tabuleiro com as casas especiais e os imóveis
-     */
+    // Inicializa o tabuleiro com as casas especiais e os imóveis
     public void inicializar(GerenciadorImoveis gerenciadorImoveis) {
         List<Imovel> imoveis = gerenciadorImoveis.getImoveis();
         
@@ -60,30 +56,22 @@ public class Tabuleiro {
         }
     }
     
-    /**
-     * Retorna a lista circular de casas
-     */
+    // Retorna a lista circular de casas
     public ListaCircular getCasas() {
         return casas;
     }
     
-    /**
-     * Retorna a casa de início
-     */
+    // Retorna a casa de início
     public NoCasa getCasaInicio() {
         return casas.encontrarCasaInicio();
     }
     
-    /**
-     * Retorna a casa de prisão
-     */
+    // Retorna a casa de prisão
     public NoCasa getCasaPrisao() {
         return casas.encontrarCasaPrisao();
     }
     
-    /**
-     * Simula o lançamento de dois dados
-     */
+    // Simula o lançamento de dois dados
     public int lancarDados() {
         int dado1 = random.nextInt(6) + 1;
         int dado2 = random.nextInt(6) + 1;
@@ -92,9 +80,7 @@ public class Tabuleiro {
         return soma;
     }
     
-    /**
-     * Verifica se os dados são duplos (iguais)
-     */
+    // Verifica se os dados são duplos (iguais)
     public boolean saoDadosDuplos() {
         int dado1 = random.nextInt(6) + 1;
         int dado2 = random.nextInt(6) + 1;
@@ -104,9 +90,7 @@ public class Tabuleiro {
         return duplos;
     }
     
-    /**
-     * Lista todas as casas do tabuleiro
-     */
+    // Lista todas as casas do tabuleiro
     public void listarCasas() {
         casas.listarCasas();
     }

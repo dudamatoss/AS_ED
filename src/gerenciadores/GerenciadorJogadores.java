@@ -5,9 +5,7 @@ import estruturas.NoCasa;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Gerenciador de jogadores usando ArrayList para operações CRUD eficientes
- */
+// Gerenciador de jogadores usando ArrayList para operações CRUD eficientes
 public class GerenciadorJogadores {
     private List<Jogador> jogadores;
     private int proximoId;
@@ -18,9 +16,7 @@ public class GerenciadorJogadores {
         inicializarDadosPreCadastrados(1500.0); // Saldo padrão
     }
     
-    /**
-     * Inicializa dados pré-cadastrados para facilitar testes
-     */
+    // Inicializa dados pré-cadastrados para facilitar testes
     private void inicializarDadosPreCadastrados(double saldoInicial) {
         // Cadastra 4 jogadores pré-definidos
         String[] nomesJogadores = {"Alice", "Bob", "Carlos", "Diana"};
@@ -30,16 +26,12 @@ public class GerenciadorJogadores {
         }
     }
     
-    /**
-     * Cadastra um novo jogador
-     */
+    // Cadastra um novo jogador
     public boolean cadastrar(String nome, double saldoInicial) {
         return cadastrar(nome, saldoInicial, true);
     }
     
-    /**
-     * Cadastra um novo jogador (versão com controle de mensagem)
-     */
+    // Cadastra um novo jogador (versão com controle de mensagem)
     private boolean cadastrar(String nome, double saldoInicial, boolean exibirMensagem) {
         if (jogadores.size() >= 6) {
             if (exibirMensagem) {
@@ -56,9 +48,7 @@ public class GerenciadorJogadores {
         return true;
     }
     
-    /**
-     * Lista todos os jogadores
-     */
+    // Lista todos os jogadores
     public void listar() {
         if (jogadores.isEmpty()) {
             System.out.println("Nenhum jogador cadastrado.");
@@ -72,9 +62,7 @@ public class GerenciadorJogadores {
         System.out.println("Total: " + jogadores.size() + " jogadores\n");
     }
     
-    /**
-     * Busca um jogador por ID
-     */
+    // Busca um jogador por ID
     public Jogador buscarPorId(int id) {
         for (Jogador jogador : jogadores) {
             if (jogador.getId() == id) {
@@ -84,9 +72,7 @@ public class GerenciadorJogadores {
         return null;
     }
     
-    /**
-     * Atualiza dados de um jogador
-     */
+    // Atualiza dados de um jogador
     public boolean atualizar(int id, String nome, double saldo) {
         Jogador jogador = buscarPorId(id);
         if (jogador == null) {
@@ -100,9 +86,7 @@ public class GerenciadorJogadores {
         return true;
     }
     
-    /**
-     * Remove um jogador
-     */
+    // Remove um jogador
     public boolean remover(int id) {
         Jogador jogador = buscarPorId(id);
         if (jogador == null) {
@@ -115,39 +99,29 @@ public class GerenciadorJogadores {
         return true;
     }
     
-    /**
-     * Retorna a lista de jogadores
-     */
+    // Retorna a lista de jogadores
     public List<Jogador> getJogadores() {
         return jogadores;
     }
     
-    /**
-     * Retorna o número de jogadores cadastrados
-     */
+    // Retorna o número de jogadores cadastrados
     public int getQuantidade() {
         return jogadores.size();
     }
     
-    /**
-     * Valida se há pelo menos 2 jogadores cadastrados
-     */
+    // Valida se há pelo menos 2 jogadores cadastrados
     public boolean validarMinimo() {
         return jogadores.size() >= 2;
     }
     
-    /**
-     * Inicializa as posições dos jogadores no tabuleiro
-     */
+    // Inicializa as posições dos jogadores no tabuleiro
     public void inicializarPosicoes(NoCasa casaInicio) {
         for (Jogador jogador : jogadores) {
             jogador.setPosicaoAtual(casaInicio);
         }
     }
     
-    /**
-     * Retorna lista de jogadores não falidos
-     */
+    // Retorna lista de jogadores não falidos
     public List<Jogador> getJogadoresAtivos() {
         List<Jogador> ativos = new ArrayList<>();
         for (Jogador jogador : jogadores) {

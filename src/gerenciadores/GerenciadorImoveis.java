@@ -4,9 +4,7 @@ import modelos.Imovel;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Gerenciador de imóveis usando ArrayList para operações CRUD eficientes
- */
+// Gerenciador de imóveis usando ArrayList para operações CRUD eficientes
 public class GerenciadorImoveis {
     private List<Imovel> imoveis;
     private int proximoId;
@@ -17,9 +15,7 @@ public class GerenciadorImoveis {
         inicializarDadosPreCadastrados();
     }
     
-    /**
-     * Inicializa dados pré-cadastrados para facilitar testes
-     */
+    // Inicializa dados pré-cadastrados para facilitar testes
     private void inicializarDadosPreCadastrados() {
         // Cadastra 15 imóveis pré-definidos
         String[] nomesImoveis = {
@@ -41,16 +37,12 @@ public class GerenciadorImoveis {
         }
     }
     
-    /**
-     * Cadastra um novo imóvel
-     */
+    // Cadastra um novo imóvel
     public boolean cadastrar(String nome, double valorCompra, double valorAluguel) {
         return cadastrar(nome, valorCompra, valorAluguel, true);
     }
     
-    /**
-     * Cadastra um novo imóvel (versão com controle de mensagem)
-     */
+    // Cadastra um novo imóvel (versão com controle de mensagem)
     private boolean cadastrar(String nome, double valorCompra, double valorAluguel, boolean exibirMensagem) {
         if (imoveis.size() >= 40) {
             if (exibirMensagem) {
@@ -67,9 +59,7 @@ public class GerenciadorImoveis {
         return true;
     }
     
-    /**
-     * Lista todos os imóveis cadastrados
-     */
+    // Lista todos os imóveis cadastrados
     public void listar() {
         if (imoveis.isEmpty()) {
             System.out.println("Nenhum imóvel cadastrado.");
@@ -83,9 +73,7 @@ public class GerenciadorImoveis {
         System.out.println("Total: " + imoveis.size() + " imóveis\n");
     }
     
-    /**
-     * Busca um imóvel por ID
-     */
+    // Busca um imóvel por ID
     public Imovel buscarPorId(int id) {
         for (Imovel imovel : imoveis) {
             if (imovel.getId() == id) {
@@ -95,9 +83,7 @@ public class GerenciadorImoveis {
         return null;
     }
     
-    /**
-     * Atualiza dados de um imóvel
-     */
+    // Atualiza dados de um imóvel
     public boolean atualizar(int id, String nome, double valorCompra, double valorAluguel) {
         Imovel imovel = buscarPorId(id);
         if (imovel == null) {
@@ -112,9 +98,7 @@ public class GerenciadorImoveis {
         return true;
     }
     
-    /**
-     * Remove um imóvel
-     */
+    // Remove um imóvel
     public boolean remover(int id) {
         Imovel imovel = buscarPorId(id);
         if (imovel == null) {
@@ -132,23 +116,17 @@ public class GerenciadorImoveis {
         return true;
     }
     
-    /**
-     * Retorna a lista de imóveis
-     */
+    // Retorna a lista de imóveis
     public List<Imovel> getImoveis() {
         return imoveis;
     }
     
-    /**
-     * Retorna o número de imóveis cadastrados
-     */
+    // Retorna o número de imóveis cadastrados
     public int getQuantidade() {
         return imoveis.size();
     }
     
-    /**
-     * Valida se há pelo menos 10 imóveis cadastrados
-     */
+    // Valida se há pelo menos 10 imóveis cadastrados
     public boolean validarMinimo() {
         return imoveis.size() >= 10;
     }

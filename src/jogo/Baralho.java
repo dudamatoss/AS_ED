@@ -5,9 +5,7 @@ import modelos.Carta;
 import modelos.TipoAcaoCarta;
 import java.util.Random;
 
-/**
- * Classe que gerencia o baralho de cartas de Sorte/Revés usando Pilha
- */
+// Classe que gerencia o baralho de cartas de Sorte/Revés usando Pilha
 public class Baralho {
     private Pilha pilhaCartas;
     private Carta[] todasCartas;
@@ -20,9 +18,7 @@ public class Baralho {
         embaralhar();
     }
     
-    /**
-     * Cria o conjunto mínimo de 16 cartas
-     */
+    // Cria conjunto de 20 cartas de Sorte/Revés
     private void criarCartas() {
         todasCartas = new Carta[] {
             // Cartas de ganhar dinheiro
@@ -59,9 +55,7 @@ public class Baralho {
         };
     }
     
-    /**
-     * Embaralha as cartas usando algoritmo Fisher-Yates
-     */
+    // Embaralha cartas usando algoritmo Fisher-Yates
     public void embaralhar() {
         // Cria uma cópia do array para embaralhar
         Carta[] cartasEmbaralhadas = todasCartas.clone();
@@ -81,9 +75,7 @@ public class Baralho {
         }
     }
     
-    /**
-     * Puxa uma carta do topo da pilha
-     */
+    // Puxa carta do topo da pilha (reembaralha se esgotar)
     public Carta puxarCarta() {
         Carta carta = pilhaCartas.desempilhar();
         
@@ -96,9 +88,7 @@ public class Baralho {
         return carta;
     }
     
-    /**
-     * Retorna o tamanho atual da pilha
-     */
+    // Retorna o tamanho atual da pilha
     public int getTamanhoPilha() {
         return pilhaCartas.getTamanho();
     }

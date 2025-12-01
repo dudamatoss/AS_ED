@@ -1,8 +1,6 @@
 package modelos;
 
-/**
- * Classe que representa uma casa no tabuleiro
- */
+// Classe que representa uma casa no tabuleiro
 public class Casa {
     private TipoCasa tipo;
     private Imovel imovel; // null se não for um imóvel

@@ -4,9 +4,7 @@ import estruturas.NoCasa;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Classe que representa um jogador no jogo
- */
+// Classe que representa um jogador no jogo
 public class Jogador {
     private int id;
     private String nome;

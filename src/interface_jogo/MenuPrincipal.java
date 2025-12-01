@@ -5,9 +5,7 @@ import modelos.Imovel;
 import modelos.Jogador;
 import java.util.Scanner;
 
-/**
- * Classe que gerencia os menus e a interface do usuário
- */
+// Classe que gerencia os menus e a interface do usuário
 public class MenuPrincipal {
     private Jogo jogo;
     private Scanner scanner;
@@ -17,9 +15,7 @@ public class MenuPrincipal {
         this.scanner = new Scanner(System.in);
     }
     
-    /**
-     * Exibe o menu principal
-     */
+    // Exibe o menu principal
     public void exibirMenu() {
         int opcao;
         
@@ -62,9 +58,7 @@ public class MenuPrincipal {
         } while (opcao != 0);
     }
     
-    /**
-     * Menu de gerenciamento de imóveis
-     */
+    // Menu de gerenciamento de imóveis
     private void menuImoveis() {
         int opcao;
         
@@ -102,9 +96,7 @@ public class MenuPrincipal {
         } while (opcao != 0);
     }
     
-    /**
-     * Cadastra um novo imóvel
-     */
+    // Cadastra um novo imóvel
     private void cadastrarImovel() {
         System.out.print("Nome do imóvel: ");
         String nome = scanner.nextLine();
@@ -119,9 +111,7 @@ public class MenuPrincipal {
         jogo.getGerenciadorImoveis().cadastrar(nome, valorCompra, valorAluguel);
     }
     
-    /**
-     * Atualiza um imóvel
-     */
+    // Atualiza um imóvel
     private void atualizarImovel() {
         jogo.getGerenciadorImoveis().listar();
         System.out.print("ID do imóvel a atualizar: ");
@@ -141,9 +131,7 @@ public class MenuPrincipal {
         jogo.getGerenciadorImoveis().atualizar(id, nome, valorCompra, valorAluguel);
     }
     
-    /**
-     * Remove um imóvel
-     */
+    // Remove um imóvel
     private void removerImovel() {
         jogo.getGerenciadorImoveis().listar();
         System.out.print("ID do imóvel a remover: ");
@@ -153,9 +141,7 @@ public class MenuPrincipal {
         jogo.getGerenciadorImoveis().remover(id);
     }
     
-    /**
-     * Menu de gerenciamento de jogadores
-     */
+    // Menu de gerenciamento de jogadores
     private void menuJogadores() {
         int opcao;
         
@@ -193,9 +179,7 @@ public class MenuPrincipal {
         } while (opcao != 0);
     }
     
-    /**
-     * Cadastra um novo jogador
-     */
+    // Cadastra um novo jogador
     private void cadastrarJogador() {
         System.out.print("Nome do jogador: ");
         String nome = scanner.nextLine();
@@ -206,9 +190,7 @@ public class MenuPrincipal {
         jogo.getGerenciadorJogadores().cadastrar(nome, saldoInicial);
     }
     
-    /**
-     * Atualiza um jogador
-     */
+    // Atualiza um jogador
     private void atualizarJogador() {
         jogo.getGerenciadorJogadores().listar();
         System.out.print("ID do jogador a atualizar: ");
@@ -225,9 +207,7 @@ public class MenuPrincipal {
         jogo.getGerenciadorJogadores().atualizar(id, nome, saldo);
     }
     
-    /**
-     * Remove um jogador
-     */
+    // Remove um jogador
     private void removerJogador() {
         jogo.getGerenciadorJogadores().listar();
         System.out.print("ID do jogador a remover: ");
@@ -237,9 +217,7 @@ public class MenuPrincipal {
         jogo.getGerenciadorJogadores().remover(id);
     }
     
-    /**
-     * Menu de configurações
-     */
+    // Menu de configurações
     private void menuConfiguracao() {
         int opcao;
         
@@ -288,9 +266,7 @@ public class MenuPrincipal {
         } while (opcao != 0);
     }
     
-    /**
-     * Carrega dados pré-cadastrados para teste rápido
-     */
+    // Carrega dados pré-cadastrados para teste rápido
     private void carregarDadosPreCadastrados() {
         System.out.println("\nCarregando dados pré-cadastrados...");
         
