@@ -1,6 +1,6 @@
 package gerenciadores;
 
-import modelos.Imovel;
+import models.Imovel;
 import java.util.ArrayList;
 import java.util.List;
 

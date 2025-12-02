@@ -1,4 +1,4 @@
-package modelos;
+package models;
 
 // Classe que representa uma casa no tabuleiro
 public class Casa {

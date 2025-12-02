@@ -1,6 +1,6 @@
 package estruturas;
 
-import modelos.Casa;
+import models.Casa;
 
 // Classe que representa um nó da lista ligada circular
 public class NoCasa {

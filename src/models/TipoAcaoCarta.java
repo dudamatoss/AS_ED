@@ -1,4 +1,4 @@
-package modelos;
+package models;
 
 // Enumeração que define os tipos de ações das cartas
 public enum TipoAcaoCarta {

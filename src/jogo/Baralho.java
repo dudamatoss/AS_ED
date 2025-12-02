@@ -1,8 +1,8 @@
 package jogo;
 
 import estruturas.Pilha;
-import modelos.Carta;
-import modelos.TipoAcaoCarta;
+import models.Carta;
+import models.TipoAcaoCarta;
 import java.util.Random;
 
 // Classe que gerencia o baralho de cartas de Sorte/Revés usando Pilha

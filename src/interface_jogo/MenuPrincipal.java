@@ -1,8 +1,7 @@
 package interface_jogo;
 
 import jogo.Jogo;
-import modelos.Imovel;
-import modelos.Jogador;
+
 import java.util.Scanner;
 
 // Classe que gerencia os menus e a interface do usuário
@@ -127,7 +126,8 @@ public class MenuPrincipal {
         System.out.print("Novo valor de aluguel: R$ ");
         double valorAluguel = scanner.nextDouble();
         scanner.nextLine();
-        
+
+        // atualizar(id, nome, valorCompra, valorAluguel) - parâmetro, esses são os valores necessários para editar um imóvel
         jogo.getGerenciadorImoveis().atualizar(id, nome, valorCompra, valorAluguel);
     }
     

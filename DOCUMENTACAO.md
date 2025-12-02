@@ -200,7 +200,7 @@ Todas as transações seguem o padrão:
 ```
 src/
 ├── Main.java                          # Ponto de entrada do programa
-├── modelos/                           # Classes de modelo
+├── models/                           # Classes de modelo
 │   ├── Casa.java                      # Representa uma casa no tabuleiro
 │   ├── Imovel.java                    # Representa um imóvel
 │   ├── Jogador.java                   # Representa um jogador

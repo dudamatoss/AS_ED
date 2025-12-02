@@ -1,4 +1,4 @@
-package modelos;
+package models;
 
 // Classe que representa uma carta de Sorte/Revés
 public class Carta {

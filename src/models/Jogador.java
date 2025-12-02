@@ -1,4 +1,4 @@
-package modelos;
+package models;
 
 import estruturas.NoCasa;
 import java.util.ArrayList;

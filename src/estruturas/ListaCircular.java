@@ -1,6 +1,6 @@
 package estruturas;
 
-import modelos.Casa;
+import models.Casa;
 
 // Lista Ligada Circular para representar o tabuleiro
 // Cada nó aponta para o próximo, formando um ciclo infinito
@@ -94,7 +94,7 @@ public class ListaCircular {
         
         NoCasa atual = inicio;
         do {
-            if (atual.getCasa().getTipo() == modelos.TipoCasa.INICIO) {
+            if (atual.getCasa().getTipo() == models.TipoCasa.INICIO) {
                 return atual;
             }
             atual = atual.getProximo();
@@ -111,7 +111,7 @@ public class ListaCircular {
         
         NoCasa atual = inicio;
         do {
-            if (atual.getCasa().getTipo() == modelos.TipoCasa.PRISAO) {
+            if (atual.getCasa().getTipo() == models.TipoCasa.PRISAO) {
                 return atual;
             }
             atual = atual.getProximo();

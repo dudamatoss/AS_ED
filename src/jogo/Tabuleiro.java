@@ -2,9 +2,9 @@ package jogo;
 
 import estruturas.ListaCircular;
 import estruturas.NoCasa;
-import modelos.Casa;
-import modelos.Imovel;
-import modelos.TipoCasa;
+import models.Casa;
+import models.Imovel;
+import models.TipoCasa;
 import gerenciadores.GerenciadorImoveis;
 import java.util.List;
 import java.util.Random;

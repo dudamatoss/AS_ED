@@ -1,4 +1,4 @@
-package modelos;
+package models;
 
 // Enumeração que define os tipos de casas no tabuleiro
 public enum TipoCasa {

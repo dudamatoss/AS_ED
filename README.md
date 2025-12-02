@@ -54,7 +54,7 @@ Simulação de jogo de tabuleiro estilo "Banco Imobiliário" em Java, demonstran
 ```
 src/
 ├── Main.java                    # Ponto de entrada
-├── modelos/                     # Classes de modelo
+├── models/                     # Classes de modelo
 ├── estruturas/                  # ListaCircular, Pilha, NoCasa
 ├── gerenciadores/               # CRUD de jogadores e imóveis
 ├── jogo/                        # Lógica principal

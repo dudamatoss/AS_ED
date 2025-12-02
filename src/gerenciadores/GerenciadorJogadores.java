@@ -1,6 +1,6 @@
 package gerenciadores;
 
-import modelos.Jogador;
+import models.Jogador;
 import estruturas.NoCasa;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class GerenciadorJogadores {
     // Inicializa dados pré-cadastrados para facilitar testes
     private void inicializarDadosPreCadastrados(double saldoInicial) {
         // Cadastra 4 jogadores pré-definidos
-        String[] nomesJogadores = {"Alice", "Bob", "Carlos", "Diana"};
+        String[] nomesJogadores = {"Juliano", "Eduarda", "João", "Isadora"};
         
         for (String nome : nomesJogadores) {
             cadastrar(nome, saldoInicial, false); // false = não exibe mensagem

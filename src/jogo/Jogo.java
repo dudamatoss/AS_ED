@@ -1,7 +1,7 @@
 package jogo;
 
 import estruturas.NoCasa;
-import modelos.*;
+import models.*;
 import gerenciadores.GerenciadorImoveis;
 import gerenciadores.GerenciadorJogadores;
 import java.util.List;

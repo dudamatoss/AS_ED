@@ -1,4 +1,4 @@
-package modelos;
+package models;
 
 // Classe que representa um imóvel no jogo
 public class Imovel {

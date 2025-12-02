@@ -1,6 +1,6 @@
 package estruturas;
 
-import modelos.Carta;
+import models.Carta;
 
 // Pilha LIFO (Last-In, First-Out) para gerenciar cartas de Sorte/Revés
 // Última carta empilhada é a primeira a ser retirada
